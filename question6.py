@@ -11,3 +11,18 @@ Indicative test cases:
 assert shortest_atom("ababab") == "ab" #must be True
 assert shortest_atom("abcabc") == "abc" #must be True
 assert shortest_atom("abcab") == "abcab" #must be True"""
+
+def shortest_atom(s):
+    atom = ""
+    for char in s:
+        atom += char
+        if len(s) % len(atom) == 0:
+            test = atom * int(len(s) / len(atom))
+            if test == s:
+                return atom
+    #return atom
+
+# Indicative test cases:
+assert shortest_atom("ababab") == "ab" #must be True
+assert shortest_atom("abcabc") == "abc" #must be True
+assert shortest_atom("abcab") == "abcab" #must be True
