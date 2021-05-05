@@ -34,3 +34,39 @@ assert a.get_info()== "John Doe" #must be True
 assert c.get_name()==("Richard", "Doe") #must be True
 assert c.get_info()== "Richard Doe Mary Ann John Doe" #must be True
 assert c.get_parents() == (p,a) #must be True """
+
+class Person:
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+
+    def get_info(self):
+
+    def get_name(self):
+
+class Adult(Person):
+    def __init__(self, first_name, last_name, phone_num):
+        super().__init__(first_name, last_name)
+        self.phone_num = phone_num
+
+    def get_phone(self):
+
+
+class Child(Person):
+    def __init__(self, first_name, last_name, parent1, parent2):
+
+    def get_info(self):
+
+    def get_parent(sefl):
+
+
+
+
+# Indicative test cases:
+p = Person("Mary", "Ann")
+a = Adult("John", "Doe", "1234567")
+c = Child("Richard", "Doe", p, a)
+assert a.get_info()== "John Doe" #must be True
+assert c.get_name()==("Richard", "Doe") #must be True
+assert c.get_info()== "Richard Doe Mary Ann John Doe" #must be True
+assert c.get_parents() == (p,a) #must be True
