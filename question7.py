@@ -41,8 +41,13 @@ class Person:
         self.last_name = last_name
 
     def get_info(self):
+        return "" + self.first_name + " " + self.last_name
 
     def get_name(self):
+        f = str(self.first_name)
+        l = str(self.last_name)
+        name = (f, l)
+        return name
 
 class Adult(Person):
     def __init__(self, first_name, last_name, phone_num):
@@ -50,14 +55,24 @@ class Adult(Person):
         self.phone_num = phone_num
 
     def get_phone(self):
+        return str(self.phone_num)
 
 
 class Child(Person):
     def __init__(self, first_name, last_name, parent1, parent2):
+        super().__init__(first_name, last_name)
+        self.parent1 = parent1
+        self.parent2 = parent2
 
     def get_info(self):
+        name = super().get_info()
+        p1 = self.parent1.get_info()
+        p2 = self.parent2.get_info()
+        return name + " " + p1 + " " + p2
 
-    def get_parent(sefl):
+    def get_parents(self):
+        parents = (self.parent1, self.parent2)
+        return parents
 
 
 
